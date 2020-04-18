@@ -53,3 +53,50 @@ function passwordGenerator(
 ) {
  console.log("inside the password generator", lenghtOfPassword);
  var tempPassword = "";
+
+ // lower = 0
+  // upper = 1
+  // numbers = 2
+  // speical = 3
+
+  // if , else, statements 
+
+  for (i = 0; i < lenghtOfPassword; i++) {
+    var flag = false;
+    while (flag == false) {
+      var currentIndex = Math.floor(Math.random() * 4);
+      //adding a lowercase
+      if (currentIndex == 0 && lower == true) {
+        const randomSmallLetter = "abcdefghijklmnopqrstuvwxyz".split("")[
+          Math.floor(Math.random() * 26)
+        ];
+        tempPassword += randomSmallLetter;
+        flag = true;
+      }
+      //adding an uppercase
+      if (currentIndex == 1 && upper == true) {
+        const randomBigLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")[
+          Math.floor(Math.random() * 26)
+        ];
+        tempPassword += randomBigLetter;
+        flag = true;
+      }
+      //adding a number
+      if (currentIndex == 2 && numbers == true) {
+        console.log("ITS a number ");
+        var randomNumber = Math.floor(Math.random() * 10);
+        randomNumber.toString();
+        tempPassword += randomNumber;
+        flag = true;
+      }
+      //adding an special case
+      if (currentIndex == 3 && specialChars == true) {
+        const randomCase = "!@#$%^&*-".split("")[Math.floor(Math.random() * 9)];
+        tempPassword += randomCase;
+        flag = true;
+      }
+    }
+    flag = false;
+  }
+  return tempPassword;
+}
