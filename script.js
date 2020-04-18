@@ -1,7 +1,14 @@
-// var pTags = document.querySelectorAll("p");
-// var divTags = document.querySelectorAll("div");
-// var aTags = document.querySelectorAll("a");
-// var imgEl = document.querySelectorAll("img");
-// var changeP = document.querySelector("#change2");
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
-// console.log(pTags);
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
