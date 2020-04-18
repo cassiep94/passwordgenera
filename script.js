@@ -32,3 +32,24 @@ function includeNumbersinPassword() {
 function includeSpecialCharinPassword() {
   return confirm("Do you want special charaters in your password?");
 }
+
+//coworker helped with this CSM @ausburg + w3 schools */
+/** */
+* 
+* @param {a} lenghtOfPassword 
+* @param {*} lower 
+* @param {*} upper 
+* @param {*} numbers 
+* @param {*} specialChars 
+* 
+* This is the actual password generator being called by the main. 
+*/
+function passwordGenerator(
+ lenghtOfPassword,
+ lower,
+ upper,
+ numbers,
+ specialChars
+) {
+ console.log("inside the password generator", lenghtOfPassword);
+ var tempPassword = "";
