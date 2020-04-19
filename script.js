@@ -100,3 +100,40 @@ function passwordGenerator(
   }
   return tempPassword;
 }
+/**
+ * This is the main. its calling each one of the functions and its also checking 
+ * to see if the user clicked yes to altease one.
+ * Its then passing the data over to the actual generator.  
+ */
+function generatePassword() {
+  //Getting the lenght of the password:
+  var passwordLenght = getPasswordLenght();
+  var includeLowerCase = includeLowerCaseinPassword();
+  var includeUperCase = includeUpperCaseinPassword();
+  var includeNumbers = includeNumbersinPassword();
+  var includeSpecialChar = includeSpecialCharinPassword();
+  if (
+    includeLowerCase == false &&
+    includeUperCase == false &&
+    includeNumbers == false &&
+    includeSpecialChar == false
+  ) {
+    alert("Password must have a special charcter. Select at least one charater type:");
+  } else {
+    var yourpassword = passwordGenerator(
+      passwordLenght,
+      includeLowerCase,
+      includeUperCase,
+      includeNumbers,
+      includeSpecialChar
+    );
+    return yourpassword;
+    
+
+    /** credit to stackoverflow  */
+
+    /** youtube chanel Vincent Lab, travesy media */
+
+    /** Resource Jose CSM JosePabloo github  */
+  }
+}
