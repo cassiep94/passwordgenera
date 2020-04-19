@@ -33,17 +33,12 @@ function includeSpecialCharinPassword() {
   return confirm("Do you want special charaters in your password?");
 }
 
-//coworker helped with this CSM @ausburg + w3 schools */
-/** */
-* 
-* @param {a} lenghtOfPassword 
-* @param {*} lower 
-* @param {*} upper 
-* @param {*} numbers 
-* @param {*} specialChars 
-* 
-* This is the actual password generator being called by the main. 
-*/
+//lengthOfpasword is function for how long password is  */
+//lower, upper, number, specialChars
+
+
+//This is the actual password generator being called by the main. 
+
 function passwordGenerator(
  lenghtOfPassword,
  lower,
