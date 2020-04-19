@@ -55,9 +55,10 @@ function passwordGenerator(
   // speical = 3
 
   // if , else, statements 
-
+// for loop will run until user length password is full 
   for (i = 0; i < lenghtOfPassword; i++) {
     var flag = false;
+    //while loop will pick a random number between 0-3
     while (flag == false) {
       var currentIndex = Math.floor(Math.random() * 4);
       //adding a lowercase
@@ -113,7 +114,7 @@ function generatePassword() {
     includeNumbers == false &&
     includeSpecialChar == false
   ) {
-    alert("Password must have a special charcter. Select at least one charater type:");
+    alert("Password must have a special character. Select at least one charater type:");
   } else {
     var yourpassword = passwordGenerator(
       passwordLenght,
@@ -125,10 +126,10 @@ function generatePassword() {
     return yourpassword;
     
 
-    /** credit to stackoverflow  */
+    // credit to stackoverflow /
 
-    /** youtube chanel Vincent Lab, travesy media */
+    // youtube chanel Vincent Lab, travesy media //
 
-    /** Resource Jose CSM JosePabloo github  */
+    // Resource Jose CSM JosePabloo github  //
   }
 }
